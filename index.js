@@ -65,7 +65,9 @@ module.exports = {
             }
         ],
         'unicorn/filename-case': 0,
-        'no-plusplus': 0
+        'no-plusplus': 0,
+        'unicorn/no-null': 0,
+        'no-restricted-globals': 0
     },
     settings: {
         'import/resolver': {
