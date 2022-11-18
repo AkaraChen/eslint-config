@@ -54,7 +54,18 @@ module.exports = {
         'no-restricted-syntax': 0,
         'unicorn/no-keyword-prefix': 0,
         'implicit-arrow-linebreak': 0,
-        'no-console': 0
+        'no-console': 0,
+        'no-return-await': 0,
+        'unicorn/prevent-abbreviations': [
+            'error',
+            {
+                allowList: {
+                    env: true
+                }
+            }
+        ],
+        'unicorn/filename-case': 0,
+        'no-plusplus': 0
     },
     settings: {
         'import/resolver': {

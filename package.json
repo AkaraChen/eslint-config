@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-akrc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-unicorn": "^44.0.2",
     "eslint-plugin-vue": "^9.7.0",
     "prettier": "^2.7.1",
     "typescript": "^4.9.3",
