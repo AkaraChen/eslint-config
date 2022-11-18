@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 export default defineComponent({});
 </script>
 
 <script setup>
-JSON.stringify({ test: 1 });
+JSON.stringify({test: 1});
 let a = 3;
 for (let index = 0; index <= 10; index += 1) {
     a = index;
