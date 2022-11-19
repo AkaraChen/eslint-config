@@ -8,7 +8,8 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:unicorn/all',
-        'airbnb-base/legacy'
+        'airbnb-base/legacy',
+        'plugin:prettier/recommended'
     ],
     overrides: [
         {
@@ -67,7 +68,8 @@ module.exports = {
         'unicorn/filename-case': 0,
         'no-plusplus': 0,
         'unicorn/no-null': 0,
-        'no-restricted-globals': 0
+        'no-restricted-globals': 0,
+        'prettier/prettier': 'error'
     },
     settings: {
         'import/resolver': {

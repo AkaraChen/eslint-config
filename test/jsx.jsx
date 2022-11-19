@@ -1,4 +1,4 @@
-export const app = <div></div>;
+export const app = <div className="hello"></div>;
 
 JSON.stringify({test: 1});
 
