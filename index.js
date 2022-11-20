@@ -5,12 +5,7 @@ module.exports = {
         es2021: true,
         node: true
     },
-    extends: [
-        'eslint:recommended',
-        'plugin:unicorn/all',
-        'airbnb-base/legacy',
-        'plugin:prettier/recommended'
-    ],
+    extends: ['eslint:recommended', 'plugin:unicorn/all', 'airbnb-base/legacy'],
     overrides: [
         {
             files: '*.vue',
@@ -68,8 +63,7 @@ module.exports = {
         'unicorn/filename-case': 0,
         'no-plusplus': 0,
         'unicorn/no-null': 0,
-        'no-restricted-globals': 0,
-        'prettier/prettier': 'error'
+        'no-restricted-globals': 0
     },
     settings: {
         'import/resolver': {
