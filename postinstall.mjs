@@ -3,23 +3,31 @@ import path from 'node:path';
 
 const currentDirectionary = process.env.INIT_CWD;
 
-fs.writeFileSync(
-    path.resolve(currentDirectionary, './.eslintrc.json'),
-    JSON.stringify({extends: ['akrc']})
-);
+const eslintConfig = path.resolve(currentDirectionary, './.eslintrc.json')
 
-fs.writeFileSync(
-    path.resolve(currentDirectionary, './.prettierrc.json'),
-    JSON.stringify({
-        tabWidth: 4,
-        singleQuote: true,
-        bracketSpacing: false,
-        endOfLine: 'auto',
-        trailingComma: 'none',
-        bracketSameLine: true,
-        arrowParens: 'avoid'
-    })
-);
+if (!fs.existsSync(eslintConfig)) {
+    fs.writeFileSync(
+        eslintConfig,
+        JSON.stringify({ extends: ['akrc'] }, null, 4)
+    );
+}
+
+const prettierConfig = path.resolve(currentDirectionary, './.prettierrc.json');
+
+if (!fs.existsSync(prettierConfig)) {
+    fs.writeFileSync(
+        prettierConfig,
+        JSON.stringify({
+            tabWidth: 4,
+            singleQuote: true,
+            bracketSpacing: false,
+            endOfLine: 'auto',
+            trailingComma: 'none',
+            bracketSameLine: true,
+            arrowParens: 'avoid'
+        }, null, 4)
+    );
+}
 
 const packageJSONPath = path.resolve(currentDirectionary, './package.json');
 
@@ -28,7 +36,5 @@ const packageJSON = JSON.parse(
 );
 
 packageJSON.scripts.lint = 'eslint --ext .js,.ts,.vue,.tsx,.jsx,.cjs,.mjs --fix .';
-
-console.log(packageJSON);
 
 fs.writeFileSync(packageJSONPath, JSON.stringify(packageJSON, null, 4));
