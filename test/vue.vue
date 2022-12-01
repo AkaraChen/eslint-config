@@ -15,3 +15,7 @@ for (let index = 0; index <= 10; index += 1) {
 }
 Number.parseInt('' + a, 10);
 </script>
+
+<script lang="ts">
+let app = 1;
+</script>

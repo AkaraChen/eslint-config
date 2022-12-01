@@ -14,6 +14,9 @@ module.exports = {
             rules: {
                 'vue/multi-word-component-names': 0,
                 'vue/html-indent': ['error', 4]
+            },
+            parserOptions: {
+                parser: '@typescript-eslint/parser'
             }
         },
         {
