@@ -12,8 +12,16 @@ module.exports = {
             parser: 'vue-eslint-parser',
             extends: ['plugin:vue/vue3-recommended'],
             rules: {
-                'vue/multi-word-component-names': 0,
-                'vue/html-indent': ['error', 4]
+                'vue/multi-word-component-names': 'off',
+                'vue/html-indent': ['error', 4],
+                'unicorn/prevent-abbreviations': [
+                    'error',
+                    {
+                        allowList: {
+                            ref: true
+                        }
+                    }
+                ]
             },
             parserOptions: {
                 parser: '@typescript-eslint/parser'
@@ -22,14 +30,14 @@ module.exports = {
         {
             files: '*.test.ts',
             rules: {
-                'no-loop-func': 0,
-                'no-undef': 0
+                'no-loop-func': 'off',
+                'no-undef': 'off'
             }
         },
         {
-            files: '.eslintrc.js',
+            files: ['.**.js', '**.config.js'],
             rules: {
-                'unicorn/prefer-module': 0
+                'unicorn/prefer-module': 'off'
             }
         }
     ],
@@ -45,16 +53,15 @@ module.exports = {
         'comma-dangle': ['error', 'never'],
         'object-curly-spacing': ['error', 'never'],
         'arrow-parens': ['error', 'as-needed'],
-        'linebreak-style': 0,
-        'consistent-return': 0,
-        'default-case': 'error',
-        'func-names': 0,
+        'linebreak-style': 'off',
+        'consistent-return': 'off',
+        'func-names': 'off',
         'no-param-reassign': 'error',
-        'no-restricted-syntax': 0,
-        'unicorn/no-keyword-prefix': 0,
-        'implicit-arrow-linebreak': 0,
-        'no-console': 0,
-        'no-return-await': 0,
+        'no-restricted-syntax': 'off',
+        'unicorn/no-keyword-prefix': 'off',
+        'implicit-arrow-linebreak': 'off',
+        'no-console': 'off',
+        'no-return-await': 'off',
         'unicorn/prevent-abbreviations': [
             'error',
             {
@@ -63,10 +70,13 @@ module.exports = {
                 }
             }
         ],
-        'unicorn/filename-case': 0,
-        'no-plusplus': 0,
-        'unicorn/no-null': 0,
-        'no-restricted-globals': 0
+        'unicorn/filename-case': 'off',
+        'no-plusplus': 'off',
+        'unicorn/no-null': 'off',
+        'no-restricted-globals': 'off',
+        'no-unused-vars': 'off',
+        'no-undef': 'off',
+        'no-use-before-define': 'off'
     },
     settings: {
         'import/resolver': {

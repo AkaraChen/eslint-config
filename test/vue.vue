@@ -18,4 +18,5 @@ Number.parseInt('' + a, 10);
 
 <script lang="ts">
 let app = 1;
+const app: number = 1;
 </script>
