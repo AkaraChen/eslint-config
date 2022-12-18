@@ -28,7 +28,7 @@ module.exports = {
             }
         },
         {
-            files: '*.test.ts',
+            files: ['*.test.ts', '**/__test__/*.ts'],
             rules: {
                 'no-loop-func': 'off',
                 'no-undef': 'off'
@@ -48,15 +48,15 @@ module.exports = {
     },
     plugins: ['@typescript-eslint'],
     rules: {
-        indent: ['error', 4],
-        quotes: ['error', 'single'],
-        'comma-dangle': ['error', 'never'],
-        'object-curly-spacing': ['error', 'never'],
+        indent: ['warn', 4],
+        quotes: ['warn', 'single'],
+        'comma-dangle': ['warn', 'never'],
+        'object-curly-spacing': ['warn', 'never'],
         'arrow-parens': ['error', 'as-needed'],
         'linebreak-style': 'off',
         'consistent-return': 'off',
         'func-names': 'off',
-        'no-param-reassign': 'error',
+        'no-param-reassign': 'warn',
         'no-restricted-syntax': 'off',
         'unicorn/no-keyword-prefix': 'off',
         'implicit-arrow-linebreak': 'off',
@@ -66,7 +66,9 @@ module.exports = {
             'error',
             {
                 allowList: {
-                    env: true
+                    env: true,
+                    dev: true,
+                    prod: true
                 }
             }
         ],
@@ -74,9 +76,11 @@ module.exports = {
         'no-plusplus': 'off',
         'unicorn/no-null': 'off',
         'no-restricted-globals': 'off',
-        'no-unused-vars': 'off',
-        'no-undef': 'off',
-        'no-use-before-define': 'off'
+        'no-unused-vars': 'warn',
+        'no-undef': 'warn',
+        'no-use-before-define': 'warn',
+        'class-methods-use-this': 'warn',
+        'default-case': 'warn'
     },
     settings: {
         'import/resolver': {
