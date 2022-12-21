@@ -28,7 +28,10 @@ module.exports = {
             }
         },
         {
-            files: ['*.test.ts', '**/__test__/*.ts'],
+            files: [
+                '*.test.ts', '**/__test__/*.ts', '*.spec.ts',
+                '*.test.js', '**/__test__/*.js', '*.spec.js'
+            ],
             rules: {
                 'no-loop-func': 'off',
                 'no-undef': 'off'
@@ -51,7 +54,6 @@ module.exports = {
         indent: ['warn', 4],
         quotes: ['warn', 'single'],
         'comma-dangle': ['warn', 'never'],
-        'object-curly-spacing': ['warn', 'never'],
         'arrow-parens': ['error', 'as-needed'],
         'linebreak-style': 'off',
         'consistent-return': 'off',

@@ -1,6 +1,6 @@
 export default 1;
 
-JSON.stringify({test: 1});
+JSON.stringify({ test: 1 });
 
 let a = 3;
 

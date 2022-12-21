@@ -2,7 +2,9 @@ import React from 'react';
 
 export const app = <div></div>;
 
-JSON.stringify({test: 1});
+JSON.stringify({ test: 1 });
+
+console.log([1, 2]);
 
 let a = 3;
 
