@@ -5,6 +5,7 @@ module.exports = {
         es2021: true,
         node: true
     },
+    ignorePatterns: ['dist/**'],
     extends: ['eslint:recommended', 'plugin:unicorn/all', 'airbnb-base/legacy'],
     overrides: [
         {
