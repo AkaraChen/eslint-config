@@ -1,5 +1,5 @@
 {
-	"prePublish": "build",
+	"prePublish": "",
 	"changelog": true,
 	"publish": true,
 	"withTag": true
