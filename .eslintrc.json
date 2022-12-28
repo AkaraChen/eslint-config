@@ -1,0 +1,92 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "ignorePatterns": ["dist /**"],
+    "extends": ["eslint:recommended", "plugin:unicorn/all", "airbnb-base/legacy"],
+    "overrides": [
+        {
+            "files": "*.vue",
+            "parser": "vue-eslint-parser",
+            "extends": ["plugin:vue/vue3-recommended"],
+            "rules": {
+                "vue/multi-word-component-names": "off",
+                "vue/html-indent": ["error", 4],
+                "unicorn/prevent-abbreviations": [
+                    "error",
+                    {
+                        "allowList": {
+                            "ref": true
+                        }
+                    }
+                ]
+            },
+            "parserOptions": {
+                "parser": "@typescript-eslint/parser"
+            }
+        },
+        {
+            "files": [
+                "*.test.ts", "**/__test__ /*.ts", "*.spec.ts",
+                "*.test.js", "**/__test__/*.js", "*.spec.js"
+            ],
+            "rules": {
+                "no-loop-func": "off",
+                "no-undef": "off"
+            }
+        },
+        {
+            "files": [".**.js", "**.config.js"],
+            "rules": {
+                "unicorn/prefer-module": "off"
+            }
+        }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+        "indent": ["warn", 4],
+        "quotes": ["warn", "single"],
+        "comma-dangle": ["warn", "never"],
+        "arrow-parens": ["error", "as-needed"],
+        "linebreak-style": "off",
+        "consistent-return": "off",
+        "func-names": "off",
+        "no-param-reassign": "warn",
+        "no-restricted-syntax": "off",
+        "unicorn/no-keyword-prefix": "off",
+        "implicit-arrow-linebreak": "off",
+        "no-console": "off",
+        "no-return-await": "off",
+        "unicorn/prevent-abbreviations": [
+            "error",
+            {
+                "allowList": {
+                    "env": true,
+                    "dev": true,
+                    "prod": true
+                }
+            }
+        ],
+        "unicorn/filename-case": "off",
+        "no-plusplus": "off",
+        "unicorn/no-null": "off",
+        "no-restricted-globals": "off",
+        "no-unused-vars": "warn",
+        "no-undef": "warn",
+        "no-use-before-define": "warn",
+        "class-methods-use-this": "warn",
+        "default-case": "warn"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": true
+        }
+    }
+}
