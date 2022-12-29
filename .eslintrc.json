@@ -82,7 +82,8 @@
         "no-undef": "warn",
         "no-use-before-define": "warn",
         "class-methods-use-this": "warn",
-        "default-case": "warn"
+        "default-case": "warn",
+        "no-shadow": "off"
     },
     "settings": {
         "import/resolver": {
