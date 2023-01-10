@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/AkaraChen/eslint-config/compare/1.0.0...1.1.0) (2023-01-10)
+
+
+### Features
+
+* formatter ([40502a7](https://github.com/AkaraChen/eslint-config/commit/40502a71096d03ff82ab22c13a32f17cb38bf3dd))
+
+
+
 # [1.0.0](https://github.com/AkaraChen/eslint-config/compare/0.0.12...1.0.0) (2022-12-29)
 
 
