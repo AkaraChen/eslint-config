@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/AkaraChen/eslint-config/compare/1.1.0...1.1.1) (2023-01-10)
+
+
+### Bug Fixes
+
+* install fail ([b5a6268](https://github.com/AkaraChen/eslint-config/commit/b5a6268a0a9896859d3b36f354a77a2cf0565880))
+
+
+
 # [1.1.0](https://github.com/AkaraChen/eslint-config/compare/1.0.0...1.1.0) (2023-01-10)
 
 
