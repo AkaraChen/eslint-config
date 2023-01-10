@@ -33,6 +33,7 @@
     },
     "files": [
         "./index.js",
-        "./.eslintrc.json"
+        "./.eslintrc.json",
+        "./postinstall.js"
     ]
 }
