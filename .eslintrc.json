@@ -64,16 +64,7 @@
         "implicit-arrow-linebreak": "off",
         "no-console": "off",
         "no-return-await": "off",
-        "unicorn/prevent-abbreviations": [
-            "error",
-            {
-                "allowList": {
-                    "env": true,
-                    "dev": true,
-                    "prod": true
-                }
-            }
-        ],
+        "unicorn/prevent-abbreviations": "off",
         "unicorn/filename-case": "off",
         "no-plusplus": "off",
         "unicorn/no-null": "off",
