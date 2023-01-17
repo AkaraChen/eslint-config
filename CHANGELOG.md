@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/AkaraChen/eslint-config/compare/1.1.1...1.2.0) (2023-01-17)
+
+
+### Features
+
+* disable unicorn/prevent-abbreviations ([51b6551](https://github.com/AkaraChen/eslint-config/commit/51b655156249089c8b58fd88d449badf4de713af))
+
+
+
 ## [1.1.1](https://github.com/AkaraChen/eslint-config/compare/1.1.0...1.1.1) (2023-01-10)
 
 
