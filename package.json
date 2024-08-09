@@ -1,0 +1,33 @@
+{
+    "name": "eslint-config",
+    "packageManager": "yarn@4.2.2",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/akarachen/eslint-config"
+    },
+    "homepage": "https://github.com/akarachen/eslint-config",
+    "devDependencies": {
+        "@akrc/tsconfig": "^1.1.0",
+        "@biomejs/biome": "^1.8.3",
+        "@types/eslint": "^9",
+        "eslint": "^9.8.0",
+        "tslib": "^2.6.3",
+        "tsup": "^8.2.4",
+        "typescript": "^5.5.4"
+    },
+    "scripts": {
+        "build": "tsup",
+        "check": "biome check . --write"
+    },
+    "exports": {
+        ".": {
+            "import": "./dist/index.js"
+        }
+    },
+    "dependencies": {
+        "eslint-flat-config-utils": "^0.3.0",
+        "eslint-plugin-unused-imports": "^4.1.2",
+        "globals": "^15.9.0"
+    }
+}
