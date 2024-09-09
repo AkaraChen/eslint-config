@@ -9,16 +9,23 @@
     "homepage": "https://github.com/akarachen/eslint-config",
     "devDependencies": {
         "@akrc/tsconfig": "^1.1.0",
-        "@biomejs/biome": "^1.8.3",
+        "@eslint/config-inspector": "^0.5.4",
         "@types/eslint": "^9",
-        "eslint": "^9.8.0",
+        "@types/eslint__js": "^8.42.3",
+        "dprint": "0.47.2",
+        "eslint": "^9.10.0",
+        "eslint-typegen": "^0.3.2",
+        "tailwindcss": "^3.4.10",
         "tslib": "^2.6.3",
         "tsup": "^8.2.4",
         "typescript": "^5.5.4"
     },
     "scripts": {
         "build": "tsup",
-        "check": "biome check . --write"
+        "dev": "tsup --watch",
+        "fmt": "dprint fmt",
+        "lint": "eslint .",
+        "inspect": "eslint-config-inspector"
     },
     "exports": {
         ".": {
@@ -26,8 +33,24 @@
         }
     },
     "dependencies": {
-        "eslint-flat-config-utils": "^0.3.0",
+        "@eslint-react/eslint-plugin": "^1.13.1",
+        "@eslint/js": "^9.10.0",
+        "@types/eslint-plugin-tailwindcss": "^3.17.0",
+        "@typescript-eslint/parser": "^8.4.0",
+        "defu": "^6.1.4",
+        "eslint-config-flat-gitignore": "^0.3.0",
+        "eslint-flat-config-utils": "^0.4.0",
+        "eslint-import-resolver-typescript": "^3.6.3",
+        "eslint-plugin-import-x": "^4.2.1",
+        "eslint-plugin-react-compiler": "0.0.0-experimental-8d8bd53-20240905",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-react-refresh": "^0.4.11",
+        "eslint-plugin-tailwindcss": "^3.17.4",
+        "eslint-plugin-unicorn": "^55.0.0",
         "eslint-plugin-unused-imports": "^4.1.2",
-        "globals": "^15.9.0"
+        "globals": "^15.9.0",
+        "local-pkg": "^0.5.0",
+        "ts-pattern": "^5.3.1",
+        "typescript-eslint": "^8.4.0"
     }
 }
