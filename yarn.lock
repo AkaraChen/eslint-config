@@ -5,6 +5,43 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@akrc/eslint-config@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@akrc/eslint-config@workspace:."
+  dependencies:
+    "@akrc/tsconfig": "npm:^1.1.0"
+    "@eslint-react/eslint-plugin": "npm:^1.13.1"
+    "@eslint/config-inspector": "npm:^0.5.4"
+    "@eslint/js": "npm:^9.10.0"
+    "@types/eslint": "npm:^9"
+    "@types/eslint-plugin-tailwindcss": "npm:^3.17.0"
+    "@types/eslint__js": "npm:^8.42.3"
+    "@typescript-eslint/parser": "npm:^8.4.0"
+    defu: "npm:^6.1.4"
+    dprint: "npm:0.47.2"
+    eslint: "npm:^9.10.0"
+    eslint-config-flat-gitignore: "npm:^0.3.0"
+    eslint-flat-config-utils: "npm:^0.4.0"
+    eslint-import-resolver-typescript: "npm:^3.6.3"
+    eslint-plugin-import-x: "npm:^4.2.1"
+    eslint-plugin-react-compiler: "npm:0.0.0-experimental-8d8bd53-20240905"
+    eslint-plugin-react-hooks: "npm:^4.6.2"
+    eslint-plugin-react-refresh: "npm:^0.4.11"
+    eslint-plugin-tailwindcss: "npm:^3.17.4"
+    eslint-plugin-unicorn: "npm:^55.0.0"
+    eslint-plugin-unused-imports: "npm:^4.1.2"
+    eslint-typegen: "npm:^0.3.2"
+    globals: "npm:^15.9.0"
+    local-pkg: "npm:^0.5.0"
+    tailwindcss: "npm:^3.4.10"
+    ts-pattern: "npm:^5.3.1"
+    tslib: "npm:^2.6.3"
+    tsup: "npm:^8.2.4"
+    typescript: "npm:^5.5.4"
+    typescript-eslint: "npm:^8.4.0"
+  languageName: unknown
+  linkType: soft
+
 "@akrc/tsconfig@npm:^1.1.0":
   version: 1.1.0
   resolution: "@akrc/tsconfig@npm:1.1.0"
@@ -2275,43 +2312,6 @@ __metadata:
   checksum: 10c0/0fd0f9c7839dec4adef633ee23c6c3aacd6edbdfc09f0f464e7d2c8e20abd514f7a6bd822fb21535f0532cf4abc49302d7334af21fcbfaedc5fbcdc8c5f1d169
   languageName: node
   linkType: hard
-
-"eslint-config@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "eslint-config@workspace:."
-  dependencies:
-    "@akrc/tsconfig": "npm:^1.1.0"
-    "@eslint-react/eslint-plugin": "npm:^1.13.1"
-    "@eslint/config-inspector": "npm:^0.5.4"
-    "@eslint/js": "npm:^9.10.0"
-    "@types/eslint": "npm:^9"
-    "@types/eslint-plugin-tailwindcss": "npm:^3.17.0"
-    "@types/eslint__js": "npm:^8.42.3"
-    "@typescript-eslint/parser": "npm:^8.4.0"
-    defu: "npm:^6.1.4"
-    dprint: "npm:0.47.2"
-    eslint: "npm:^9.10.0"
-    eslint-config-flat-gitignore: "npm:^0.3.0"
-    eslint-flat-config-utils: "npm:^0.4.0"
-    eslint-import-resolver-typescript: "npm:^3.6.3"
-    eslint-plugin-import-x: "npm:^4.2.1"
-    eslint-plugin-react-compiler: "npm:0.0.0-experimental-8d8bd53-20240905"
-    eslint-plugin-react-hooks: "npm:^4.6.2"
-    eslint-plugin-react-refresh: "npm:^0.4.11"
-    eslint-plugin-tailwindcss: "npm:^3.17.4"
-    eslint-plugin-unicorn: "npm:^55.0.0"
-    eslint-plugin-unused-imports: "npm:^4.1.2"
-    eslint-typegen: "npm:^0.3.2"
-    globals: "npm:^15.9.0"
-    local-pkg: "npm:^0.5.0"
-    tailwindcss: "npm:^3.4.10"
-    ts-pattern: "npm:^5.3.1"
-    tslib: "npm:^2.6.3"
-    tsup: "npm:^8.2.4"
-    typescript: "npm:^5.5.4"
-    typescript-eslint: "npm:^8.4.0"
-  languageName: unknown
-  linkType: soft
 
 "eslint-flat-config-utils@npm:^0.4.0":
   version: 0.4.0
