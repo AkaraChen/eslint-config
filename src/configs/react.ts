@@ -1,14 +1,13 @@
 import type { Linter, ESLint } from 'eslint';
-// @ts-expect-error the deps is just not typed
 import reactRefresh from 'eslint-plugin-react-refresh';
-// @ts-expect-error the deps is just not typed
 import reactCompiler from 'eslint-plugin-react-compiler';
-// @ts-expect-error the deps is just not typed
 import reactHook from 'eslint-plugin-react-hooks';
 import eslintReact from '@eslint-react/eslint-plugin';
 import type { ConfigResolver } from './types';
 
-export const react: ConfigResolver = (): Array<Linter.Config | undefined> => {
+export const react: ConfigResolver = (opts) => {
+    const { enabled } = opts.react;
+    if (!enabled) return;
     return [
         {
             name: 'akrc/react-refresh',

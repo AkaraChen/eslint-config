@@ -7,6 +7,8 @@ import { sources } from '../constants';
 import type { ConfigResolver } from './types';
 
 export const typescript: ConfigResolver = (options) => {
+    const { enabled } = options.ts;
+    if (!enabled) return;
     const preset = match(options.ts)
         .with(
             { typeChecked: true, strict: true },

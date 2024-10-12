@@ -1,27 +1,34 @@
 import { defu } from 'defu';
 import { isPackageListed } from 'local-pkg';
 
-export interface TypeScriptOptions {
+export interface BaseOptions {
+    enabled: boolean;
+}
+
+export interface TypeScriptOptions extends BaseOptions {
     strict: boolean;
     typeChecked: boolean;
 }
 
-export interface ReactOptions {
-    enabled: boolean;
+export interface ReactOptions extends BaseOptions {
     dom: boolean;
     native: boolean;
 }
 
-export interface TailwindOptions {
+export interface TailwindOptions extends BaseOptions {
     enabled: boolean;
     callee: string[];
 }
 
+export interface VitestOptions extends BaseOptions {
+    enabled: boolean;
+}
+
 export interface Options {
-    strict: boolean;
     ts: TypeScriptOptions;
     react: ReactOptions;
     tailwind: TailwindOptions;
+    vitest: VitestOptions;
     ignores: string[];
 }
 
@@ -29,8 +36,8 @@ export const mergeDefaultOptions = async (
     options?: Partial<Options>,
 ): Promise<Options> => {
     const defaults: Options = {
-        strict: false,
         ts: {
+            enabled: true,
             strict: true,
             typeChecked: true,
         },
@@ -42,6 +49,9 @@ export const mergeDefaultOptions = async (
         tailwind: {
             enabled: await isPackageListed('tailwindcss'),
             callee: ['classnames', 'clsx', 'ctl', 'cn', 'cva'],
+        },
+        vitest: {
+            enabled: await isPackageListed('vitest'),
         },
         ignores: [],
     };

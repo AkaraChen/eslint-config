@@ -1,6 +1,13 @@
 import '../eslint-typegen.d';
 import { composer } from 'eslint-flat-config-utils';
-import { javascript, typescript, ignores, tailwindcss, react } from './configs';
+import {
+    javascript,
+    typescript,
+    ignores,
+    tailwindcss,
+    react,
+    vitest,
+} from './configs';
 import { mergeDefaultOptions, type Options } from './options';
 
 async function akrc(input?: Options) {
@@ -11,6 +18,7 @@ async function akrc(input?: Options) {
         typescript(options),
         tailwindcss(options),
         react(options),
+        vitest(options),
     );
 }
 
