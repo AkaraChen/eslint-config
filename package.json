@@ -69,7 +69,5 @@
         "ts-pattern": "^5.3.1",
         "typescript-eslint": "^8.4.0"
     },
-    "files": [
-        "dist"
-    ]
+    "files": ["dist"]
 }

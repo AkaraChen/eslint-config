@@ -1,13 +1,13 @@
 import type { ConfigResolver } from './types';
-import eslintVitest from '@vitest/eslint-plugin';
 
-export const vitest: ConfigResolver = (options) => {
+export const vitest: ConfigResolver = async (options) => {
     const { enabled } = options.vitest;
     if (!enabled) return;
+    const vitest = await import('@vitest/eslint-plugin').then((m) => m.default);
     return [
         {
             files: ['**/*.{test,spec}.{ts,tsx,js,jsx}'],
-            ...eslintVitest.configs.recommended,
+            ...vitest.configs.recommended,
         },
     ];
 };

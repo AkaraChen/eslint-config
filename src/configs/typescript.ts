@@ -1,14 +1,16 @@
 import type { Linter } from 'eslint';
-import * as ts from 'typescript-eslint';
-import js from '@eslint/js';
 import { match } from 'ts-pattern';
-import importx from 'eslint-plugin-import-x';
 import { sources } from '../constants';
 import type { ConfigResolver } from './types';
 
-export const typescript: ConfigResolver = (options) => {
+export const typescript: ConfigResolver = async (options) => {
     const { enabled } = options.ts;
     if (!enabled) return;
+    const ts = await import('typescript-eslint').then((m) => m.default);
+    const importx = await import('eslint-plugin-import-x').then(
+        (m) => m.default,
+    );
+    const js = await import('@eslint/js').then((m) => m.default);
     const preset = match(options.ts)
         .with(
             { typeChecked: true, strict: true },

@@ -1,13 +1,21 @@
 import type { Linter, ESLint } from 'eslint';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import reactCompiler from 'eslint-plugin-react-compiler';
-import reactHook from 'eslint-plugin-react-hooks';
-import eslintReact from '@eslint-react/eslint-plugin';
 import type { ConfigResolver } from './types';
 
-export const react: ConfigResolver = (opts) => {
+export const react: ConfigResolver = async (opts) => {
     const { enabled } = opts.react;
     if (!enabled) return;
+    const reactRefresh = await import('eslint-plugin-react-refresh').then(
+        (m) => m.default,
+    );
+    const reactCompiler = await import('eslint-plugin-react-compiler').then(
+        (m) => m.default,
+    );
+    const reactHook = await import('eslint-plugin-react-hooks').then(
+        (m) => m.default,
+    );
+    const eslintReact = await import('@eslint-react/eslint-plugin').then(
+        (m) => m.default,
+    );
     return [
         {
             name: 'akrc/react-refresh',
