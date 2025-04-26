@@ -2,7 +2,11 @@
     "extends": "@akrc/tsconfig/node.json",
     "compilerOptions": {
         "types": ["./eslint-typegen.d.ts"],
-        "checkJs": true
+        "checkJs": true,
+        "esModuleInterop": true,
+        "paths": {
+            "@/*": ["./src/*"]
+        }
     },
     "include": ["**/*.ts"]
 }

@@ -1,5 +1,6 @@
 import { defu } from 'defu';
 import { isPackageListed } from 'local-pkg';
+import { satisfiesSemver } from '@/utils/local-pkg';
 
 export interface BaseOptions {
     enabled: boolean;
@@ -47,7 +48,7 @@ export const mergeDefaultOptions = async (
             native: await isPackageListed('react-native'),
         },
         tailwind: {
-            enabled: await isPackageListed('tailwindcss'),
+            enabled: await satisfiesSemver('tailwindcss', '<4.0.0'),
             callee: ['classnames', 'clsx', 'ctl', 'cn', 'cva'],
         },
         vitest: {

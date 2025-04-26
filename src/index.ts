@@ -1,4 +1,3 @@
-import '../eslint-typegen.d';
 import { composer } from 'eslint-flat-config-utils';
 import {
     javascript,
