@@ -32,7 +32,8 @@
         "fmt": "dprint fmt",
         "lint": "eslint .",
         "inspect": "eslint-config-inspector",
-        "gen": "tsx scripts/typegen.ts"
+        "gen": "tsx scripts/typegen.ts",
+        "prepublishOnly": "yarn build"
     },
     "exports": {
         "import": {
